@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: nishantdotnetfile 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nishantdotnetfile
+  template:
+    metadata:
+      labels:
+        app: nishantdotnetfile 
+    spec:
+      containers:
+        - name: nishantdotnetfile 
+          image: conatinerimage.azurecr.io/nishantdotnetfile
+          ports:
+          - containerPort: 5000
